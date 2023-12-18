@@ -24,10 +24,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 	Route::middleware('is_admin')->group(function () {
 		Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
 		Route::delete('/feedback/{id}', [FeedbackController::class, 'destroy']);
-		Route::post('/feedback', [FeedbackController::class, 'store']);
 		Route::get('/forecasts', [ForecastsController::class, 'index'])->name('forecasts');
 		Route::post('/forecasts', [ForecastsController::class, 'editData']);
 	});
+	Route::post('/feedback', [FeedbackController::class, 'store']);
 	Route::get('/', [ForecastsController::class, 'show'])->name('dashboard');
 	Route::get('/{date}', [ForecastsController::class, 'forecastByDate']);
 });
