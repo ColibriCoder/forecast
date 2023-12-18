@@ -1,4 +1,4 @@
-import Plus from '@/Components/Icons/plus';
+import Plus from '@/Components/Icons/Plus';
 import PrimaryButton from '@/Components/PrimaryButton';
 import { PrecentageOptions } from '@/Components/Select';
 import Table from '@/Components/Table';
